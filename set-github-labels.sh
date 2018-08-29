@@ -22,20 +22,19 @@ curl -u $TOKEN:x-oauth-basic --request DELETE https://api.github.com/repos/$REPO
 curl -u $TOKEN:x-oauth-basic --request DELETE https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/question
 curl -u $TOKEN:x-oauth-basic --request DELETE https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels/wontfix
 
-#create state labels
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"In Analysis","color":"fbca04"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Ready","color":"fbca04"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"In Progress","color":"c2e0c6"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"In Review","color":"c2e0c6"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Feature Testing","color":"0e8a16"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Integration Testing","color":"0e8a16"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-
 #create helper labels
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Bug: Dev","color":"d93f0b"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Bug: Prod","color":"d93f0b"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Blocked","color":"b60205"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Test Failed","color":"b60205"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Track Time","color":"5319e7"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Help Wanted","color":"c5def5"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Trash","color":"000000"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
-curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"Requirement","color":"c5def5"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"backlog","color":"3498DB"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"beta","color":"E74C3C"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"blocked","color":"A569BD"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"bug","color":"C0392B"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"chore","color":"FCF3CF"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"duplicate","color":"D6DBDF"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"enhance","color":"85C1E9"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"feature","color":"F0B27A"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"feedback wanted","color":"A9DFBF"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"help wanted","color":"27AE60"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"invalid","color":"CACFD2"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"refactor","color":"F1C40F"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"security","color":"E59866"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"style","color":"7D3C98"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
+curl -u $TOKEN:x-oauth-basic --include --request POST --data '{"name":"wontfix","color":"ffffff"}' "https://api.github.com/repos/$REPO_USER/$REPO_NAME/labels"
